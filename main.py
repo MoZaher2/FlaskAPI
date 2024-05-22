@@ -17,7 +17,7 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 # Load your AI model
-model = load_model("keras_Model.h5", compile=False)
+model = load_model("keras_model.h5", compile=False)
 class_names = open("labels.txt", "r").readlines()
 
 # Define a function to preprocess the image
