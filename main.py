@@ -7,6 +7,9 @@ from PIL import Image
 from flask_cors import CORS  # Import CORS extension
 import os
 
+# Apply monkey patch
+import monkey_patch_inspect
+
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
