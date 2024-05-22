@@ -4,14 +4,12 @@ from flask import Flask, request, jsonify
 from keras.models import load_model
 import numpy as np
 from PIL import Image
-from flask_cors import CORS  # Import CORS extension
 import os
 
 # Apply monkey patch
 import monkey_patch_inspect
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
 
 # Initialize Firebase 
 cred = credentials.Certificate("firebase_credentials.json")
